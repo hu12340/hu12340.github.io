@@ -1,12 +1,12 @@
 # Basic
-title: 潘柏信
-subtitle: 个人站
-description: 欢迎来到我的个人站~
+title: 胡豆秆
+subtitle: 个人博客
+description: 欢迎来到我的个人博客~
 # 头像里面的标题
-avatarTitle: leopardpan
+avatarTitle: hubeans
 # 头像里面的描述
-avatarDesc: iOS / 机器学习
-url: "http://baixin.io"
+avatarDesc: Java / 摸鱼鬼才
+url: "http://hu12340.github.io"
 
 # Comment
 comment:
@@ -16,13 +16,13 @@ comment:
 
 # Social
 social:
-    weibo: 5366874726 
-    github: leopardpan
+    weibo: 807566806 
+    github: hu12340
     # zhihu: panpanleopard
     # juejin: xxx
-    jianshu: 2ada30d8d0f7
+    jianshu: 
     # twitter: 
-    mail: leopardpan@icloud.com
+    mail: 15775960389@163.com
 
 
 # 百度统计 

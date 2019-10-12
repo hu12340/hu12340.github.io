@@ -1,13 +1,13 @@
-------
-
+---
 layout: post
 title: "github+jekyll搭建个人博客"
 date: 2019-10-12 
-tags: github+jekyll
+description: "github+jekyll搭建个人博客"
 
-------
+tag: github+jekyll 
+---   
 
-​	最近发现github上可以免费的搭建个人博客，在网上找了很多教程之后，终于完成了。教程链接：**https://www.cnblogs.com/zjjDaily/p/8695978.html**  ，这个教程很详细，不过也有坑。**我主要来说说这个教程的简单攻略方法**。
+　　最近发现github上可以免费的搭建个人博客，在网上找了很多教程之后，终于完成了。教程链接：**https://www.cnblogs.com/zjjDaily/p/8695978.html**  ，这个教程很详细，不过也有坑。**我主要来说说这个教程的简单攻略方法**。
 
 ​	在跟着教程走到**第二大步：安装jekyll** 时，**可以跳过2、3步，主要注意4步。**
 

@@ -3,7 +3,7 @@
 layout: post
 title: "github+jekyll搭建个人博客"
 date: 2019-10-12 
-description: "github+jekyll搭建个人博客"
+tags: github+jekyll
 
 ------
 

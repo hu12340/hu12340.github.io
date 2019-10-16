@@ -42,6 +42,6 @@ tag: github+jekyll
 希望这篇文章对你能有所帮助。
 
 <div align="center">
-	<img src="/images/路飞.jpg" height="200" width="200">  
+	<img src="/images/路飞.jpg">  
 </div> 
 

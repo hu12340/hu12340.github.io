@@ -39,6 +39,16 @@ tag: github+jekyll
 	<img src="/images/QQ图片20191014142149.png" />  
 </div> 
 
+​	如果对html不熟，也不想使用这种方法，那我们可以使用typora直接插入图片地址。上传图片到自己的github上（当然也可直接用网上的图片地址），在项目中找到该图片并复制图片地址。
+
+![1571617967820]( https:\\raw.githubusercontent.com\hu12340\hu12340.github.io\master\images\posts\博客搭建\1571617967820.png)
+
+​	在typora中右键选择插入-图像，然后选择输入图片地址，粘贴即可。
+
+![](https:\\raw.githubusercontent.com\hu12340\hu12340.github.io\master\images\posts\博客搭建\1571618156316.png)
+
+
+
 希望这篇文章对你能有所帮助。
 
 <div align="center">

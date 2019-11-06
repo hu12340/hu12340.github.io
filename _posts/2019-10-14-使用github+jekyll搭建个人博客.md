@@ -10,7 +10,7 @@ tag: 博客
 
 **1.拥有github账号**（已经有github账号及git的请跳过）  
 
-​		若要使用github搭建免费博客，**github账号是必要的**，而本地的git工具并非必要。若不想安装git工具则可跳过这步。想必作为一个程序员，自己的电脑上一般都会有安装git工具，如果没有就请去安装一个。对于github搭建的博客而言，主要用于更新和修改博客。因为在github上搭建的博客属于静态网页，需要在本地修改了之后push到远程仓库，进而实现博客的更新。  当然也可以在github网页上进行更新，这就是不需要本地git工具的理由之一。
+​		若要使用github搭建免费博客，**github账号是必要的**，而本地的git工具并非必要。在浏览器上进入[https://github.com/](https://github.com/)**登录自己的github账号**。接下来的**不想麻烦的就可以直接去第2步**找自己主题了，若不想安装git工具则可跳过这步。想必作为一个程序员，自己的电脑上一般都会有安装git工具，如果没有就**请**去安装一个。对于github搭建的博客而言，主要用于更新和修改博客。因为在github上搭建的博客属于静态网页，需要在本地修改了之后push到远程仓库，进而实现博客的更新。  当然也可以在github网页上进行更新，这就是不需要本地git工具的理由之一。
 
 ​		此处附三个git安装教程：https://blog.csdn.net/qq_32786873/article/details/80570783 ，https://blog.csdn.net/weixin_43127338/article/details/83965053 ，https://www.cnblogs.com/bestchenyan/p/9298410.html 。如果还是有问题的话，请教一下同学同事什么的。  
 

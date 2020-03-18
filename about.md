@@ -15,7 +15,7 @@ title: 关于我
 
 <h3> 友情链接 </h3>  
 
-- [BugLi](https://bugcontainer.github.io/)
+- [BugLi的回收站](https://bugcontainer.github.io/)
 - [DoubleWay Blog](https://doubleway.github.io/)
 - [xjfcloud](https://xjfcloud.cn/)
 - [LiHao](https://lihaozhu.github.io/)

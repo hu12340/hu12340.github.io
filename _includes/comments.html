@@ -43,23 +43,22 @@
 
 
   {% elsif site.comment.gitalk %}
-	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
-	<div id="gitalk-container"></div>
-		<script type="text/javascript">
-		var gitalk = new Gitalk({
-
-		// gitalk的主要参数
-		    clientID: 'a110285c17681caa62b5',
-		    clientSecret: '2df00187c2eb685098fe8378ef06636af82d8590',
-		    repo: 'blog-comment',
-		    owner: 'hu12340',
-		    admin: ['hu12340'],
-		    distractionFreeMode: false
-
-		});
-		gitalk.render('gitalk-container');
-	</script> 
+    <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    var gitalk = new Gitalk({
+        id: '{{ page.url | truncate: 50, '' }}',
+        clientID: '{{ site.comment.gitalk.clientID }}',
+        clientSecret: '{{ site.comment.gitalk.clientSecret }}',
+        repo: '{{ site.comment.gitalk.repo }}',
+        owner: '{{ site.comment.gitalk.owner }}',
+        admin: ['{{ site.comment.gitalk.owner }}'],
+        labels: ['gitment'],
+        perPage: 50,
+    })
+    gitalk.render('gitalk-container')
+    </script>
   {% endif %}
 
 </section>

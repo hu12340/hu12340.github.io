@@ -1,48 +1,5 @@
 <section class="post-comments">
 
-  {% if site.comment.uyan %}
-    <div id="uyan_frame"></div>
-
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="+'{{ site.comment.uyan }}'></script>
-
-  {% elsif site.comment.disqus %}
-    <div id="disqus_thread"></div>
-    <script>
-    
-    var disqus_config = function () {
-        this.page.url = "{{ page.url | prepend: site.baseurl | prepend: site.url }}";
-        this.page.identifier = "{{ page.url }}";
-    };
-    var disqus_shortname = '{{ site.comment.disqus }}';
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
-    
-
-  {% elsif site.comment.gitment %}
-    <div id="gitmentContainer"></div>
-    <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-    <script src="https://jjeejj.github.io/js/gitment.js"></script>
-    <script>
-    var gitment = new Gitment({
-        owner: 'hu12340',
-        repo: 'blog-comment',
-        oauth: {
-            client_id: 'a110285c17681caa62b5',
-            client_secret: '2df00187c2eb685098fe8378ef06636af82d8590',
-        },
-    });
-    gitment.render('gitmentContainer');
-    </script>
-
-
-  {% elsif site.comment.gitalk %}
     <div id="gitalk-container"></div>
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
     <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
@@ -59,6 +16,6 @@
     })
     gitalk.render('gitalk-container')
     </script>
-  {% endif %}
+
 
 </section>

@@ -12,19 +12,7 @@ url: "http://hu12340.github.io"
 comment:
 #     disqus: hu12340
 # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
-    gitment:
-        enable: true # 是否开启gitment评论系统
-        mint: true #
-        count: true # 是否显示评论数
-        lazy: true # 懒加载，设置为ture时需手动展开评论
-        cleanly: true # 是否隐藏'Powered by ...'
-        language:  # 语言，置空则随主题的语言
-        github_user: hu12340 # Github用户名
-        github_repo: blog-comment # 在Github新建一个仓库用于存放评论，这是仓库名
-        client_id: a110285c17681caa62b5 # 注册OAuth Application时生成
-        client_secret: 2df00187c2eb685098fe8378ef06636af82d8590 # 注册OAuth Application时生成
-        proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
-        redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+    gittalk:
 # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social

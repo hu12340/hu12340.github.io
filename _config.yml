@@ -10,17 +10,17 @@ url: "http://hu12340.github.io"
 
 # Comment
 comment:
-    disqus: leopard
+    disqus: hu12340
     # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social
 social:
-    weibo: 807566806 
+    weibo: 5951657872
     github: hu12340
-    # zhihu: panpanleopard
+    # zhihu: 
     # juejin: xxx
-    jianshu: 
+    #jianshu: 
     # twitter: 
     mail: 15775960389@163.com
 

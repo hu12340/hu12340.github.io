@@ -10,8 +10,8 @@ url: "http://hu12340.github.io"
 
 # Comment
 comment:
-    # disqus: hu12340
-    # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
+#     disqus: hu12340
+# gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     gitment:
         enable: true # 是否开启gitment评论系统
         mint: true #
@@ -25,16 +25,16 @@ comment:
         client_secret: 2df00187c2eb685098fe8378ef06636af82d8590 # 注册OAuth Application时生成
         proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
         redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
-    # uyan: 2143225  # 有言id,登录有言官网申请
+# uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social
 social:
     weibo: 5951657872
     github: hu12340
-    # zhihu: 
-    # juejin: xxx
-    #jianshu: 
-    # twitter: 
+# zhihu: 
+# juejin: xxx
+#jianshu: 
+# twitter: 
     mail: 15775960389@163.com
 
 

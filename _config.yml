@@ -13,6 +13,10 @@ comment:
 #     disqus: hu12340
 # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     gittalk:
+		owner: hu12340
+    	repo: blog-comment
+    	clientID: a110285c17681caa62b5
+    	clientSecret: 2df00187c2eb685098fe8378ef06636af82d8590
 # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social

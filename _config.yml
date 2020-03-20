@@ -10,7 +10,7 @@ url: "http://hu12340.github.io"
 
 # Comment
 comment:
-    disqus: hu12340
+    # disqus: hu12340
     # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     gitment:
         enable: true # 是否开启gitment评论系统

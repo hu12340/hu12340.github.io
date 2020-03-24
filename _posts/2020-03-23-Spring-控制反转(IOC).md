@@ -10,7 +10,7 @@ tag: spring
 
 # **Spring框架概述**
 
-​		Spring是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson 在其著作Expert One-On-One J2EE Development and Design中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许使用者选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。Spring的核心是**控制反转（IoC）**和**面向切面（AOP）**。简单来说，Spring是一个分层的JavaSE/EE full-stack(一站式) 轻量级开源框架。
+    	Spring是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson 在其著作Expert One-On-One J2EE Development and Design中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许使用者选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。Spring的核心是**控制反转（IoC）**和**面向切面（AOP）**。简单来说，Spring是一个分层的JavaSE/EE full-stack(一站式) 轻量级开源框架。
 
 # **Spring的优点**
 
@@ -40,7 +40,7 @@ tag: spring
 
 # **Spring的使用**
 
-​		使用Spring框架需要在项目中导入四个核心jar包和一个依赖。4个核心（[beans](https://repo1.maven.org/maven2/org/springframework/spring-beans/5.2.4.RELEASE/spring-beans-5.2.4.RELEASE.jar)、[core](https://repo1.maven.org/maven2/org/springframework/spring-core/5.2.4.RELEASE/spring-core-5.2.4.RELEASE.jar)、[context](https://repo1.maven.org/maven2/org/springframework/spring-context/5.2.4.RELEASE/spring-context-5.2.4.RELEASE.jar)、[expression](https://repo1.maven.org/maven2/org/springframework/spring-expression/5.2.4.RELEASE/spring-expression-5.2.4.RELEASE.jar)） + 1个依赖（[commons-logging](https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar)）。
+    	使用Spring框架需要在项目中导入四个核心jar包和一个依赖。4个核心（[beans](https://repo1.maven.org/maven2/org/springframework/spring-beans/5.2.4.RELEASE/spring-beans-5.2.4.RELEASE.jar)、[core](https://repo1.maven.org/maven2/org/springframework/spring-core/5.2.4.RELEASE/spring-core-5.2.4.RELEASE.jar)、[context](https://repo1.maven.org/maven2/org/springframework/spring-context/5.2.4.RELEASE/spring-context-5.2.4.RELEASE.jar)、[expression](https://repo1.maven.org/maven2/org/springframework/spring-expression/5.2.4.RELEASE/spring-expression-5.2.4.RELEASE.jar)） + 1个依赖（[commons-logging](https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar)）。
 
 在src目录下创建配置文件 `applicationContext.xml`
 
@@ -128,7 +128,7 @@ public class Demo {
 	<img src="/images/posts/Spring-控制反转(IOC)/property注入参数.png" />  
 </div> 
 
-​		从结果可以看出，Person对象被成功创建，并且属性已被赋值。这里并没有使用new Person()创建对象，而是使用了控制反转的方式（**控制反转：类依赖于接口的实现类，但是自己不去构造它，构造的选择权交给第三方**）。spring容器构建对象，默认使用的是无参构造。若想使用有参构创建对象，则需要使用`constructor-arg`标签。
+    	从结果可以看出，Person对象被成功创建，并且属性已被赋值。这里并没有使用new Person()创建对象，而是使用了控制反转的方式（**控制反转：类依赖于接口的实现类，但是自己不去构造它，构造的选择权交给第三方**）。spring容器构建对象，默认使用的是无参构造。若想使用有参构创建对象，则需要使用`constructor-arg`标签。
 
 修改配置文件`applicationContext.xml`中的`<bean>`标签。
 
@@ -148,13 +148,13 @@ public class Demo {
 	<img src="/images/posts/Spring-控制反转(IOC)/constructor-arg注入参数.png" />  
 </div> 
 
-​		从这次的结果可以看出，Person对象被成功创建，并且属性已被赋值。而这次使用的构造方法却是Person(String name, int age, char sex) 。其中如果constructor-arg标签设置值的顺序与构造方法中参数的值参数类型顺序一致(即类型匹配)，则可将index属性省略。index属性用于设置该参数在构造方法参数中的位置(0,1...)。
+    	从这次的结果可以看出，Person对象被成功创建，并且属性已被赋值。而这次使用的构造方法却是Person(String name, int age, char sex) 。其中如果constructor-arg标签设置值的顺序与构造方法中参数的值参数类型顺序一致(即类型匹配)，则可将index属性省略。index属性用于设置该参数在构造方法参数中的位置(0,1...)。
 
-# Spring的依赖注入
+# **Spring的依赖注入**
 
-​		**类依赖于接口的实现类，该实现类由第三方去注入。**
+    	**类依赖于接口的实现类，该实现类由第三方去注入。**
 
-​		在日常开发中，只是设置这些基本数据类型值并不能满足需求。如一个bean里面包含了另一对象(如另一个bean或集合)，则可通过spring将该对象注入到这个bean中。
+    	在日常开发中，只是设置这些基本数据类型值并不能满足需求。如一个bean里面包含了另一对象(如另一个bean或集合)，则可通过spring将该对象注入到这个bean中。
 
 创建实体类`CollectionDemo.java`
 
@@ -238,11 +238,11 @@ public static void main(String[] args) {
 	<img src="/images/posts/Spring-控制反转(IOC)/依赖注入.png" />  
 </div> 
 
-​		从运行结果可以看出，CollectionDemo类中的各个属性都已被赋值。它的Persong属性也已被赋值，该属性在配置文件中，通过使用`ref`指向了前面定义的bean-person。即通过`property`标签的`ref`属性，可将别的bean设置到该属性上(即该属性值引用了别的bean)。
+    	从运行结果可以看出，CollectionDemo类中的各个属性都已被赋值。它的Persong属性也已被赋值，该属性在配置文件中，通过使用`ref`指向了前面定义的bean-person。即通过`property`标签的`ref`属性，可将别的bean设置到该属性上(即该属性值引用了别的bean)。
 
-# Spring的Bean属性
+# **Spring的Bean属性**
 
-​		这里贴一篇大佬的博客： [Spring配置文件解析--bean属性](https://www.cnblogs.com/wzz1020/p/4753067.html)，以下内容主要参考该博客。
+    	这里贴一篇大佬的博客： [Spring配置文件解析--bean属性](https://www.cnblogs.com/wzz1020/p/4753067.html)，以下内容主要参考该博客。
 
 ```xml
 <bean
@@ -296,25 +296,25 @@ factory-bean="bean">（14）
 
 （8）`autowire`（自动装配，默认为`default`）：它定义了Bean的自动装载方式。
 
-​		a.`no`:不使用自动装配功能。
+    	a.`no`:不使用自动装配功能。
 
-​		b.`byName`:通过Bean的属性名实现自动装配。
+    	b.`byName`:通过Bean的属性名实现自动装配。
 
-​		c.`byType`:通过Bean的类型实现自动装配。
+    	c.`byType`:通过Bean的类型实现自动装配。
 
-​		d.`constructor`:类似于byType，但它是用于构造函数的参数的自动组装。
+    	d.`constructor`:类似于byType，但它是用于构造函数的参数的自动组装。
 
-​		e.`autodetect`:通过Bean类的反省机制（introspection）决定是使用“constructor”还是使用“byType”。
+    	e.`autodetect`:通过Bean类的反省机制（introspection）决定是使用“constructor”还是使用“byType”。
 
 （9）`dependency-check`（依赖检查，默认为`default`）：它用来确保Bean组件通过JavaBean描述的所以依赖关系都得到满足。在与自动装配功能一起使用时，它特别有用。
 
-​		a. `none`：不进行依赖检查。
+    	a. `none`：不进行依赖检查。
 
-​		b. `objects`：只做对象间依赖的检查。
+    	b. `objects`：只做对象间依赖的检查。
 
-​		c. `simple`：只做原始类型和String类型依赖的检查
+    	c. `simple`：只做原始类型和String类型依赖的检查
 
-​		d. `all`：对所有类型的依赖进行检查。它包括了前面的objects和simple。
+    	d. `all`：对所有类型的依赖进行检查。它包括了前面的objects和simple。
 
 （10）`depends-on`（依赖对象）：这个Bean在初始化时依赖的对象，这个对象会在这个Bean初始化之前创建。
 
@@ -344,7 +344,7 @@ factory-bean="bean">（14）
 <bean id="person" class="com.hu.pojo.Person" scope="singleton"/>
 ```
 
-​		这里的`scope`就是用来配置spring bean的作用域，它标识bean的作用域。在spring2.0之前bean只有2种作用域即：`singleton`(单例)、`non-singleton`（也称 `prototype`）, Spring2.0以后，增加了`session`、`request`、`global session`三种专用于Web应用程序上下文的Bean。因此，默认情况下Spring2.0现在有五种类型的Bean。当然，Spring2.0对 Bean的类型的设计进行了重构，并设计出灵活的Bean类型支持，理论上可以有无数多种类型的Bean，用户可以根据自己的需要，增加新的Bean类 型，满足实际应用需求。
+    	这里的`scope`就是用来配置spring bean的作用域，它标识bean的作用域。在spring2.0之前bean只有2种作用域即：`singleton`(单例)、`non-singleton`（也称 `prototype`）, Spring2.0以后，增加了`session`、`request`、`global session`三种专用于Web应用程序上下文的Bean。因此，默认情况下Spring2.0现在有五种类型的Bean。当然，Spring2.0对 Bean的类型的设计进行了重构，并设计出灵活的Bean类型支持，理论上可以有无数多种类型的Bean，用户可以根据自己的需要，增加新的Bean类 型，满足实际应用需求。
 
 1.`singleton`
 
@@ -354,7 +354,7 @@ factory-bean="bean">（14）
 <bean id="person" class="com.hu.pojo.Person" singleton="true"/>
 ```
 
-​		当一个bean的作用域设置为`singleton`, 那么Spring IOC容器中**只会存在一个共享的bean实例**，并且所有对bean的请求，只要id与该bean定义相匹配，则只会返回bean的**同一实例**。换言之，当把 一个bean定义设置为`singleton`作用域时，Spring IOC容器只会创建该bean定义的唯一实例。这个单一实例会被存储到单例缓存（singleton cache）中，并且所有针对该bean的后续请求和引用都将返回被缓存的对象实例，这里要注意的是`singleton`作用域和GOF设计模式中的单例是完全不同的，单例设计模式表示一个ClassLoader中 只有一个class存在，而这里的`singleton`则表示一个容器对应一个bean，也就是说当一个bean被标识为`singleton`时 候，spring的IOC容器中只会存在一个该bean。
+    	当一个bean的作用域设置为`singleton`, 那么Spring IOC容器中**只会存在一个共享的bean实例**，并且所有对bean的请求，只要id与该bean定义相匹配，则只会返回bean的**同一实例**。换言之，当把 一个bean定义设置为`singleton`作用域时，Spring IOC容器只会创建该bean定义的唯一实例。这个单一实例会被存储到单例缓存（singleton cache）中，并且所有针对该bean的后续请求和引用都将返回被缓存的对象实例，这里要注意的是`singleton`作用域和GOF设计模式中的单例是完全不同的，单例设计模式表示一个ClassLoader中 只有一个class存在，而这里的`singleton`则表示一个容器对应一个bean，也就是说当一个bean被标识为`singleton`时 候，spring的IOC容器中只会存在一个该bean。
 
 2.`prototype`
 
@@ -364,11 +364,11 @@ factory-bean="bean">（14）
 <bean id="person" class="com.hu.pojo.Person" singleton="false"/>
 ```
 
-​		`prototype`作用域部署的bean，每一次请求（将其注入到另一个bean中，或者以程序的方式调用容器的`getBean()`方法）**都会产生一个新的bean实例，相当与一个new的操作**，对于`prototype`作用域的bean，有一点非常重要，那就是Spring不能对一个prototype bean的整个生命周期负责，容器在初始化、配置、装饰或者是装配完一个`prototype`实例后，将它交给客户端，随后就对该`prototype`实例不闻不问了。不管何种作用域，容器都会调用所有对象的初始化生命周期回调方法，而对`prototype`而言，任何配置好的析构生命周期回调方法都将不会被调用。 清除`prototype`作用域的对象并释放任何prototype bean所持有的昂贵资源，都是客户端代码的职责。（让Spring容器释放被`singleton`作用域bean占用资源的一种可行方式是，通过使用 bean的后置处理器，该处理器持有要被清除的bean的引用。）
+    	`prototype`作用域部署的bean，每一次请求（将其注入到另一个bean中，或者以程序的方式调用容器的`getBean()`方法）**都会产生一个新的bean实例，相当与一个new的操作**，对于`prototype`作用域的bean，有一点非常重要，那就是Spring不能对一个prototype bean的整个生命周期负责，容器在初始化、配置、装饰或者是装配完一个`prototype`实例后，将它交给客户端，随后就对该`prototype`实例不闻不问了。不管何种作用域，容器都会调用所有对象的初始化生命周期回调方法，而对`prototype`而言，任何配置好的析构生命周期回调方法都将不会被调用。 清除`prototype`作用域的对象并释放任何prototype bean所持有的昂贵资源，都是客户端代码的职责。（让Spring容器释放被`singleton`作用域bean占用资源的一种可行方式是，通过使用 bean的后置处理器，该处理器持有要被清除的bean的引用。）
 
 3.`request`
 
-​		`request`表示该针对每一次HTTP请求都会产生一个新的bean，同时该bean仅在当前HTTP request内有效。
+    	`request`表示该针对每一次HTTP请求都会产生一个新的bean，同时该bean仅在当前HTTP request内有效。
 
 `request`、`session`、`global session`使用的时候首先要在初始化web的web.xml中做如下配置：
 
@@ -413,7 +413,7 @@ factory-bean="bean">（14）
 <bean id="person" class="com.hu.pojo.Person" scope="session"/>
 ```
 
-​		`session`作用域表示该针对每一次HTTP请求都会产生一个新的bean，同时该bean仅在当前HTTP session内有效。和`request`配置实例的前提一样，需要配置好web启动文件。
+    	`session`作用域表示该针对每一次HTTP请求都会产生一个新的bean，同时该bean仅在当前HTTP session内有效。和`request`配置实例的前提一样，需要配置好web启动文件。
 
 5.`global session`
 
@@ -421,11 +421,11 @@ factory-bean="bean">（14）
 <bean id="person" class="com.hu.pojo.Person" scope="global session"/>
 ```
 
-​		`global session`作用域类似于标准的HTTP Session作用域，不过它仅仅在基于portlet的web应用中才有意义。Portlet规范定义了全局Session的概念，它被所有构成某个 portlet web应用的各种不同的portlet所共享。在global session作用域中定义的bean被限定于全局portlet Session的生命周期范围内。如果你在web中使用global session作用域来标识bean，那么web会自动当成session类型来使用。
+    	`global session`作用域类似于标准的HTTP Session作用域，不过它仅仅在基于portlet的web应用中才有意义。Portlet规范定义了全局Session的概念，它被所有构成某个 portlet web应用的各种不同的portlet所共享。在global session作用域中定义的bean被限定于全局portlet Session的生命周期范围内。如果你在web中使用global session作用域来标识bean，那么web会自动当成session类型来使用。
 
-​		和`request`配置实例的前提一样，需要配置好web启动文件。
+    	和`request`配置实例的前提一样，需要配置好web启动文件。
 
 6.自定义bean装配作用域
 
-​		在spring2.0中作用域是可以任意扩展的，你可以自定义作用域，甚至你也可以重新定义已有的作用域（但是你不能覆盖`singleton`和 `prototype`），spring的作用域由接口org.springframework.beans.factory.config.Scope来定 义，自定义自己的作用域只要实现该接口即可。此次暂不做过多介绍。
+    	在spring2.0中作用域是可以任意扩展的，你可以自定义作用域，甚至你也可以重新定义已有的作用域（但是你不能覆盖`singleton`和 `prototype`），spring的作用域由接口org.springframework.beans.factory.config.Scope来定 义，自定义自己的作用域只要实现该接口即可。此次暂不做过多介绍。
 

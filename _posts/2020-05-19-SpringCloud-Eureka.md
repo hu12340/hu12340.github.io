@@ -6,7 +6,6 @@ description: "SpringCloud-Eureka"
 tag: SpringCloud 
 ---
 
-
 ------
 
 # Eureka简介
@@ -324,6 +323,9 @@ public class ConsumerController {
 	
 	@Autowired
 	private RestTemplate restTemplate;
+    
+    //@Autowired
+	//private LoadBalancerClient loadBalancerClient;
 	
 	@RequestMapping("/gettest")
 	public String getUserInfoTest() {
@@ -331,6 +333,11 @@ public class ConsumerController {
         //这种方式必须先开启负载均衡在Main方法中RestTemplate上加注解@LoadBalanced
         //否则会造成找不到服务的错误
 		return restTemplate.getForObject("http://app-user/user/get", String.class);
+        //也可使用以下方法
+        //ServiceInstance instance = loadBalancerClient.choose("app-user");
+		//String url = "http://" + instance.getHost() + ":" + instance.getPort() + "/user/get";
+		//System.out.println(url);
+		//return restTemplate.getForObject(url, String.class);
 	}
 }
 ```

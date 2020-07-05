@@ -179,8 +179,9 @@ public class Demo {
 运行结果
 
 <div align="center">
-	<img src="/images/posts/Spring-AOP/aop:advisor.png" />  
+	<img src="/images/posts/Spring-AOP/aop_advisor.png" />  
 </div> 
+
 
 ## **aop:aspect**
 
@@ -233,7 +234,7 @@ public class MyAspect{
 运行结果
 
 <div align="center">
-	<img src="/images/posts/Spring-AOP/aop:aspect.png" />  
+	<img src="/images/posts/Spring-AOP/aop_aspect.png" />  
 </div> 
 
 ## **aop:aspect与aop:advisor的区别**

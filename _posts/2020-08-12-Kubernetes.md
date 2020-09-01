@@ -426,7 +426,8 @@ PersistentVolume的回收策略告诉集群在存储卷声明释放后应如何�
 
 7.  Pod使用PVC
 
-    ![image-20200901114747502](D:\MyBlog\hu12340.github.io\images\posts\Kubernetes\Pod使用PVC.png" />  
+<div align="center">
+	<img src="/images/posts\Kubernetes\Pod使用PVC.png" />  
 </div> 
 
 8.  此时在pod中读写相应的目录，就会将数据读写到远程的NFS服务器上。

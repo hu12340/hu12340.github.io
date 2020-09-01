@@ -25,12 +25,12 @@ k8s还具备完善的管理工具，可以在上面进行部署测试、运维�
 ## 架构
 
 <div align="center">
-	<img src="/images/posts/Kubernetes架构.png" />  
+	<img src="/images/posts/Kubernetes\Kubernetes架构.png" />  
+</div> 
+<div align="center">
+	<img src="/images/posts/Kubernetes\Kubernetes架构2.png" />  
 </div> 
 
-<div align="center">
-	<img src="/images/posts/Kubernetes架构2.png" />  
-</div> 
 
 -   kubectl：k8s的sdk（对接k8s）
 
@@ -432,9 +432,3 @@ PersistentVolume的回收策略告诉集群在存储卷声明释放后应如何�
 8.  此时在pod中读写相应的目录，就会将数据读写到远程的NFS服务器上。
 
 总结：kubernetes中都是用组件解耦的方法进行管理和使用，通过标签的方法很巧妙的联系到一起，各个组件各司其职，实现了功能很强大的集群管理系统。
-
-
-
-<div align="center">
-	<img src="/images/posts/图片路径" />  
-</div> 

@@ -454,7 +454,7 @@ services:
 
 # 配置网络环境
 
-以下所涉及的命令都是在`fabric-samples/first-network/base`目录下进行执行。
+以下所涉及的命令都是在`fabric-samples/first-network`目录下进行执行。
 
 ## 生成证书和公私钥
 
